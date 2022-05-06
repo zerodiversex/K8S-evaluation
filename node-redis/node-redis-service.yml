@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: z-node-redis-service
+spec:
+  selector:
+    app: z-node-redis
+  ports:
+    - protocol: TCP
+      port: 5400
+      targetPort: 5400
+      nodePort: 30102
+  type: LoadBalancer

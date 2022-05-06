@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: z-node-redis-deployment
+  labels:
+    app: z-node-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: z-node-redis
+  template:
+    metadata:
+      labels:
+        app: z-node-redis
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: z-node-redis
+        image: cloud.canister.io:5000/arhturescriou/node-redis
+        ports:
+        - containerPort: 5400
+        env:
+        - name: PORT
+          value: "5400"
+        - name: REDIS_URL
+          value: "redis://10.3.252.55"

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: z-react-redis-deployment
+  labels:
+    app: z-react-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: z-react-redis
+  template:
+    metadata:
+      labels:
+        app: z-react-redis
+    spec:
+      imagePullSecrets:
+      - name: regcred
+      containers:
+      - name: z-react-redis
+        image: artemiszz/redis_react:firsttry 
+        ports:
+        - containerPort: 80

@@ -55,7 +55,7 @@ Un fois qu'un serveur fonctionne augmentez le nombre de pods (node-redis), entre
 Veuillez regrouper tous vos fichiers yaml de déploiement (et ou commande lancées en bash) dans un repository git muni d'un readme.md.
 
 Pousser le repository en ligne (github, gitlab etc).
-Et m'envoyer le lien sur slack (cela peut être fait en debut d'examen, je regarderai la dernière version poussé)
+Et m'envoyer le lien sur slack (cela peut être fait en debut d'examen, je regarderai la dernière version poussée)
 
 ## Commandes utiles
 

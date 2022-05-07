@@ -9,6 +9,7 @@
 ```bash
 cd ./redis
 ```
+- Pour le déployment Kubernestes:
 ```bash
 kubectl create -f Qredis-deployement.yaml
 ```
@@ -20,6 +21,7 @@ kubectl create -f redis-service.yaml
 ```bash
 cd ./node-redis
 ```
+- Pour le déployment Kubernestes:
 ```bash
 kubectl create -f node-redis-deployement.yaml
 ```
@@ -31,15 +33,19 @@ kubectl create -f node-redis-service.yaml
 ```bash
 cd ./redis-react
 ```
+- Pour build image Docker : 
 ```bash
 docker build -t redis-react .
 ```
+- Pour tag avan push à DockerHub : 
 ```bash
 docker tag 51c284fcc1dc artemiszz\redis_react:firsttry
 ```
+- Pour push à DockerHub : 
 ```bash
 docker push artemiszz/redis_react:firsttry
 ```
+- Pour le déployment Kubernestes:
 ```bash
 kubectl create -f reds-react-deployement.yaml
 ```
